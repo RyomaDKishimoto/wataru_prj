@@ -1,7 +1,7 @@
 [build]
-  publish = ".next"
+  command = "# no build command"
   functions = "netlify/functions"
-  command = "npm run build-prod"
+  publish = "."
 
 [[redirects]]
   from = '/api/*'
