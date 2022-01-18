@@ -23,7 +23,7 @@ const CheckoutForm = () => {
     e.preventDefault();
     setLoading(true);
     // Create a Checkout Session.
-    const response = await fetchPostJSON('/api/checkout_sessions', {
+    const response = await fetchPostJSON('/api/stripe', {
       amount: input.customDonation,
     });
 
