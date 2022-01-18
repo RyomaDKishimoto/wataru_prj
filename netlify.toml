@@ -1,13 +1,7 @@
 [build]
   publish = "out"
-  command = "npm run build-prod"
   functions = "netlify/functions"
-
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
-  
-[[plugins]]
-  package = "netlify-plugin-cache-nextjs"
+  command = "npm run build-prod"
 
 [[redirects]]
   from = '/api/*'
