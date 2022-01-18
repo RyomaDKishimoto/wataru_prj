@@ -3,6 +3,11 @@
   command = "npm run build-prod"
   functions = "netlify/functions"
 
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+  
+[[plugins]]
+  package = "netlify-plugin-cache-nextjs"
 
 [[redirects]]
   from = '/api/*'
