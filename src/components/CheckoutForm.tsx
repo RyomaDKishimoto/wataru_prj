@@ -26,11 +26,14 @@ const CheckoutForm = () => {
     const response = await fetchPostJSON('/api/checkout_sessions', {
       amount: input.customDonation,
     });
-
-    if (response.statusCode === 500) {
-      console.error(response.message);
+    if (response.data.statusCode === 500) {
+      console.error(response.data.message);
       return;
     }
+    // if (response.statusCode === 500) {
+    //   console.error(response.message);
+    //   return;
+    // }
 
     // Redirect to Checkout.
     const stripe = await getStripe();
@@ -38,7 +41,8 @@ const CheckoutForm = () => {
       // Make the id field from the Checkout Session creation API response
       // available to this file, so you can provide it as parameter here
       // instead of the {{CHECKOUT_SESSION_ID}} placeholder.
-      sessionId: response.id,
+      sessionId: response.data.id,
+      // sessionId: response.id,
     });
     // If `redirectToCheckout` fails due to a browser or network
     // error, display the localized error message to your customer
