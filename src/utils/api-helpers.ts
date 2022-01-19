@@ -13,7 +13,7 @@ export async function fetchPostJSON(url: string, data?: {}) {
   try {
     console.log(url);
     const response = await axios.post(
-      `https://stupefied-feynman-e5c559.netlify.app/.netlify/functions/charge`,
+      `https://stupefied-feynman-e5c559.netlify.app/.netlify/functions/stripe`,
       {
         method: 'POST', // *GET, POST, PUT, DELETE, etc.
         mode: 'cors', // no-cors, *cors, same-origin
