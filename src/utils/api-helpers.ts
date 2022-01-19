@@ -11,6 +11,7 @@ export async function fetchGetJSON(url: string) {
 
 export async function fetchPostJSON(url: string, data?: {}) {
   try {
+    console.log(url);
     const response = await axios.post(
       `https://stupefied-feynman-e5c559.netlify.app/.netlify/functions/charge`,
       {
